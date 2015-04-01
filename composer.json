@@ -5,7 +5,5 @@
 	"require": {
 		"php": ">=5.2.4"
 	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
-	}
+	"require-dev": {}
 }
