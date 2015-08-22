@@ -29,7 +29,7 @@ $config['base_url'] = 'https://' . getenv('OPENSHIFT_APP_DNS') . '/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -286,8 +286,15 @@ $config['cache_path'] = getenv('OPENSHIFT_DATA_DIR') . 'storage/framework/cache'
 | Cache Include Query String
 |--------------------------------------------------------------------------
 |
-| Set this to TRUE if you want to use different cache files depending on the
-| URL query string.  Please be aware this might result in numerous cache files.
+| Whether to take the URL query string into consideration when generating
+| output cache files. Valid options are:
+|
+|	FALSE      = Disabled
+|	TRUE       = Enabled, take all query parameters into account.
+|	             Please be aware that this may result in numerous cache
+|	             files generated for the same page over and over again.
+|	array('q') = Enabled, but only take into account the specified list
+|	             of query parameters.
 |
 */
 $config['cache_query_string'] = FALSE;
@@ -386,7 +393,7 @@ $config['cookie_httponly'] 	= FALSE;
 |--------------------------------------------------------------------------
 |
 | Determines whether to standardize newline characters in input data,
-| meaning to replace \r\n, \r, \n occurences with the PHP_EOL value.
+| meaning to replace \r\n, \r, \n occurrences with the PHP_EOL value.
 |
 | This is particularly useful for portability between UNIX-based OSes,
 | (usually \n) and Windows (\r\n).

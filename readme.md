@@ -138,7 +138,7 @@ To stop tailing the logs, press *Ctrl + c*.
 CodeIgniter 3 [provides support for Composer](http://www.codeigniter.com/userguide3/general/autoloader.html)
 to auto-load additional packages. The value of `composer_autoload` is set to 
 `FALSE` by default, however, this QuickStart is pre-configured to allow you to 
-enable this feature and use OpenShift's built-in suppoert for Composer.
+enable this feature and use OpenShift's built-in support for Composer.
 
 When the application is pushed, `composer install` is automatically executed 
 over the root directory. See [PHP Markers](https://developers.openshift.com/en/php-markers.html) 
